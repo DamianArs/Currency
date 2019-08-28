@@ -1,0 +1,98 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1 class="info">Aktualne notowania walut {{money[0][0].effectiveDate}}</h1>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Waluta</th>
+            <th>Aktualna cena</th>
+            <th>Zmiana</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>CHF <img src="../../assets/chf.png"></td>
+            <td>{{money[0][0].rates[9].mid}}</td>
+            <td *ngIf="money[0][0].rates[9].mid-moneyYesterday[0][0].rates[9].mid>0"><i class="fas fa-arrow-up"></i>
+            </td>
+            <td *ngIf="money[0][0].rates[9].mid - moneyYesterday[0][0].rates[9].mid===0"><i
+                class="fas fa-arrow-right"></i></td>
+            <td *ngIf="money[0][0].rates[9].mid-moneyYesterday[0][0].rates[9].mid<0"><i class="fas fa-arrow-down"></i>
+            </td>
+          </tr>
+          <tr>
+            <td>CZK <img src='../../assets/czech.png'></td>
+            <td>{{money[0][0].rates[13].mid}}</td>
+            <td *ngIf="money[0][0].rates[13].mid-moneyYesterday[0][0].rates[13].mid==0"><i
+                class="fas fa-arrow-right"></i></td>
+            <td *ngIf="money[0][0].rates[13].mid-moneyYesterday[0][0].rates[13].mid>0"><i class="fas fa-arrow-up"></i>
+            </td>
+            <td *ngIf="money[0][0].rates[13].mid-moneyYesterday[0][0].rates[13].mid<0"><i class="fas fa-arrow-down"></i>
+            </td>
+          </tr>
+          <tr>
+            <td>EUR <img src='../../assets/euro.png'></td>
+            <td>{{money[0][0].rates[7].mid}}</td>
+            <td *ngIf="money[0][0].rates[7].mid-moneyYesterday[0][0].rates[7].mid===0"><i
+                class="fas fa-arrow-right"></i></td>
+            <td *ngIf="money[0][0].rates[7].mid-moneyYesterday[0][0].rates[7].mid>0"><i class="fas fa-arrow-up"></i>
+            </td>
+            <td *ngIf="money[0][0].rates[7].mid-moneyYesterday[0][0].rates[7].mid<0"><i class="fas fa-arrow-down"></i>
+            </td>
+          </tr>
+          <tr>
+            <td>GBP <img src='../../assets/uk.png'></td>
+            <td>{{money[0][0].rates[10].mid}}</td>
+            <td *ngIf="money[0][0].rates[10].mid-moneyYesterday[0][0].rates[10].mid===0"><i
+                class="fas fa-arrow-right"></i></td>
+            <td *ngIf="money[0][0].rates[10].mid-moneyYesterday[0][0].rates[10].mid>0"><i class="fas fa-arrow-up"></i>
+            </td>
+            <td *ngIf="money[0][0].rates[10].mid-moneyYesterday[0][0].rates[10].mid<0"><i class="fas fa-arrow-down"></i>
+            </td>
+          </tr>
+          <tr>
+            <td>HRK <img src='../../assets/hrk.png'></td>
+            <td>{{money[0][0].rates[18].mid}}</td>
+            <td *ngIf="money[0][0].rates[18].mid-moneyYesterday[0][0].rates[18].mid===0"><i
+                class="fas fa-arrow-right"></i></td>
+            <td *ngIf="money[0][0].rates[18].mid-moneyYesterday[0][0].rates[18].mid>0"><i class="fas fa-arrow-up"></i>
+            </td>
+            <td *ngIf="money[0][0].rates[18].mid-moneyYesterday[0][0].rates[18].mid<0"><i class="fas fa-arrow-down"></i>
+            </td>
+          </tr>
+          <tr>
+            <td>HUN <img src='../../assets/hun.png'></td>
+            <td>{{money[0][0].rates[8].mid}}</td>
+            <td *ngIf="money[0][0].rates[8].mid-moneyYesterday[0][0].rates[8].mid===0"><i
+                class="fas fa-arrow-right"></i></td>
+            <td *ngIf="money[0][0].rates[8].mid-moneyYesterday[0][0].rates[8].mid>0"><i class="fas fa-arrow-up"></i>
+            </td>
+            <td *ngIf="money[0][0].rates[8].mid-moneyYesterday[0][0].rates[8].mid<0"><i class="fas fa-arrow-down"></i>
+            </td>
+          </tr>
+          <tr>
+            <td>UAH <img src='../../assets/ua.png'></td>
+            <td>{{money[0][0].rates[11].mid}}</td>
+            <td *ngIf="money[0][0].rates[11].mid-moneyYesterday[0][0].rates[11].mid===0"><i
+                class="fas fa-arrow-right"></i></td>
+            <td *ngIf="money[0][0].rates[11].mid-moneyYesterday[0][0].rates[11].mid>0"><i class="fas fa-arrow-up"></i>
+            </td>
+            <td *ngIf="money[0][0].rates[11].mid-moneyYesterday[0][0].rates[11].mid<0"><i class="fas fa-arrow-down"></i>
+            </td>
+          </tr>
+          <tr>
+            <td>USD <img src='../../assets/usa.png'></td>
+            <td>{{money[0][0].rates[1].mid}}</td>
+            <td *ngIf="money[0][0].rates[1].mid-moneyYesterday[0][0].rates[1].mid===0"><i
+                class="fas fa-arrow-right"></i></td>
+            <td *ngIf="money[0][0].rates[1].mid-moneyYesterday[0][0].rates[1].mid>0"><i class="fas fa-arrow-up"></i>
+            </td>
+            <td *ngIf="money[0][0].rates[1].mid-moneyYesterday[0][0].rates[1].mid<0"><i class="fas fa-arrow-down"></i>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

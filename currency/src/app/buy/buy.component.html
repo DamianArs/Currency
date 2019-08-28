@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="info">Kupno walut</h1>
+    </div>
+  </div>
+  <div class="currencyForm">
+    <form (ngSubmit)="onSubmit()">
+      <div class="row">
+        <div class="col-sm-4">
+          <label for="choice">Wybierz walutę
+            <select class="form-control" [(ngModel)]="message.currency" id="choice" name="choice">
+              <option *ngFor="let item of currency">{{item}}</option>
+            </select>
+          </label>
+        </div>
+        <div class="col-sm-4">
+          <label for="how">Ile chcesz kupić?
+            <input [(ngModel)]="message.howMany" type="number" name="how" id="how">
+          </label>
+        </div>
+        <div class class="col-sm-4">
+          <button type="submit">Przelicz</button>
+        </div>
+      </div>
+      <div class="row information">
+        <div class="col-sm-6" *ngIf="kurs">
+          <h6>Aktualny kurs kupna {{kurs | currency:"PLN"}}</h6>
+        </div>
+        <div class="col-sm-6" *ngIf="sum">
+          <h3>Koszt transakcji {{sum.toFixed(2) | currency:"PLN"}}</h3>
+        </div>
+      </div>
+    </form>
+
+  </div>
+
+</div>
